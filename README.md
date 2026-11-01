@@ -1,51 +1,84 @@
-AICTE NIVARAN
-National Integrated Voice for Action, Redress & Accountability
-An Integrated Institution Complaint Monitoring, 360° Audit & Cross-Bureau Overlap Coordination Platform
-![Image](https://img.shields.io/badge/Smart%20India%20Hackathon-2024%2F2026-blue?style=for-the-badge)
-![Image](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Image](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Image](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Image](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
-🌐 Live Deployments & Evaluator Access
-Public Web Application: https://aicte-nivaran-phi.vercel.app
-Interactive API Documentation (Swagger): https://aicte-nivaran-api.onrender.com/docs
-Demo Officer Credentials:
-Email: officer.aicte@nic.in
-Password: Admin@123
-Role Tier: Super Admin (Member Secretary / Advisor)
-📌 Problem Statement & Context
-The All India Council for Technical Education (AICTE) processes complaints and regulatory matters across multiple statutory departments, including:
-Regulation Bureau (RB): Faculty service rules, pay scale violations, unapproved course sanctions.
-Public Grievance Redressal Cell (PGRC): Student harassment, certificate retention, curriculum disruption.
-Approval Bureau (AB): Land/infrastructure norms, Extension of Approval (EoA) compliance.
-Vigilance Cell (VIG): Financial diversion, administrative misconduct.
-Regional Offices: Field validations across 7 zones.
-The Silo Trap
+# AICTE NIVARAN
+> **National Integrated Voice for Action, Redress & Accountability**  
+> *An Integrated Institution Complaint Monitoring, 360° Audit & Cross-Bureau Overlap Coordination Platform*
+
+---
+
+[![Smart India Hackathon](https://img.shields.io/badge/Smart%20India%20Hackathon-2024%2F2026-102A56?style=for-the-badge)](https://sih.gov.in/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F2B544.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+---
+
+## 🌐 Live Deployments & Credentials
+
+| Resource | URL |
+| :--- | :--- |
+| **Public Web Application** | [https://aicte-nivaran-phi.vercel.app](https://aicte-nivaran-phi.vercel.app) |
+| **Interactive API Documentation** | [https://aicte-nivaran-api.onrender.com/docs](https://aicte-nivaran-api.onrender.com/docs) |
+| **Evaluator Email** | `officer.aicte@nic.in` |
+| **Evaluator Password** | `Admin@123` |
+| **Operational Role** | `Super Admin (Member Secretary / Advisor)` |
+
+---
+
+## 📌 Problem Statement & Context
+
+The **All India Council for Technical Education (AICTE)** processes complaints and regulatory matters across multiple statutory departments:
+* **Regulation Bureau (RB)**: Faculty service rules, pay scale violations, unapproved courses.
+* **Public Grievance Redressal Cell (PGRC)**: Student harassment, certificate retention, curriculum disruption.
+* **Approval Bureau (AB)**: Land/infrastructure norms, Extension of Approval (EoA) compliance.
+* **Vigilance Cell (VIG)**: Financial diversion, administrative misconduct.
+* **Regional Offices**: Field validations across 7 zones.
+
+### The Silo Trap
 When an institutional crisis occurs, stakeholders file separate petitions with different bureaus at the same time:
-Faculty file salary non-payment petitions with the Regulation Bureau.
-Students file class suspension grievances with the Public Grievance Redressal Cell.
+* *Faculty file salary non-payment petitions with the **Regulation Bureau**.*
+* *Students file class suspension grievances with the **Public Grievance Redressal Cell**.*
+
 Because departments traditionally operate without real-time cross-referencing, the result is:
-Duplicated administrative effort: Separate officers conduct parallel inquiries on the same college.
-Conflicting statutory orders: One bureau may issue a show-cause notice while another processes approval.
-Regulatory evasion: Non-compliant administrations exploit departmental delays.
-💡 The Solution: AICTE NIVARAN
-AICTE NIVARAN establishes a single source of truth across all AICTE bureaus based on three architectural pillars:
-Centralized Institution 360° Profile: Every accredited college has a single permanent ledger aggregating all lifetime complaints, approval histories, and show-cause notices by Permanent AICTE ID.
-Intelligent Cross-Bureau Overlap Engine: A semantic matching engine (RapidFuzz NLP) that scans complaints across bureaus in real time. When related root causes are detected, it alerts officers with a "POTENTIAL OVERLAPPING CASES — COORDINATION REQUIRED" banner and a similarity score.
-Statutory 30-Day SLA Enforcement: Tracks complaint ageing across brackets (0-7, 8-15, 16-30, and >30 days Overdue), escalating delayed cases to senior council management.
-🏛️ Key Features & GIGW Compliance
-GIGW 3.0 Accessibility Toolbar: Top government ribbon with dynamic font sizing (A-, A, A+), high-contrast black-and-yellow display mode, and a bilingual toggle (Hindi & English).
-Interactive GIS India Map: Dynamic Survey of India vector map reflecting real-time state complaint counts directly from the database.
-Priority Action Hub: Prominent dashboard callout highlighting urgent items requiring officer review today.
-Chronological Case Tracking: Immutable vertical lifecycle timeline tracking every procedural step, officer note, bureau transfer, and final order.
-Quick-View Drawer: Slide-over panel to inspect complaint dossiers without losing table filters or navigating away.
-Reports Suite: Interactive analytical charts (Recharts) with one-click CSV export and printable audit reports.
-🛠️ Architecture & Tech Stack
-code
-Text
+1. **Duplicated Administrative Effort**: Separate officers conduct parallel inquiries on the same college.
+2. **Conflicting Statutory Orders**: One bureau may issue a show-cause notice while another processes approval.
+3. **Regulatory Evasion**: Non-compliant administrations exploit departmental delays.
+
+---
+
+## 💡 The Solution: AICTE NIVARAN##
+┌──────────────────────────────────────────────────────────────────────────┐
+│ AICTE NIVARAN                                                            │
+├─────────────────────┬────────────────────────────┬───────────────────────┤
+│ 1. INSTITUTION      │ 2. INTELLIGENT OVERLAP     │ 3. COORDINATED        │
+│ 360° PROFILE        │ DETECTION ENGINE           │ DISPOSAL              │
+├─────────────────────┼────────────────────────────┼───────────────────────┤
+│ Single master file  │ Semantic NLP scans across  │ One-click linking for │
+│ aggregating lifetime│ bureaus to flag duplicate  │ joint Jan Sunwai      │
+│ cases by AICTE ID.  │ inquiries in real time.    │ virtual hearings.     │
+└─────────────────────┴────────────────────────────┴───────────────────────┘
+
+1. **Centralized Institution 360° Profile**: Every accredited college has a single permanent ledger aggregating all lifetime complaints, approval histories, and show-cause notices by **Permanent AICTE ID**.
+2. **Intelligent Cross-Bureau Overlap Engine**: A semantic matching engine (RapidFuzz NLP) that scans complaints across bureaus in real time. When related root causes are detected, it alerts officers with a **`POTENTIAL OVERLAPPING CASES — COORDINATION REQUIRED`** banner and a similarity score.
+3. **Statutory 30-Day SLA Enforcement**: Tracks complaint ageing across brackets (`0-7`, `8-15`, `16-30`, and `>30 days Overdue`), escalating delayed cases to senior council management.
+
+---
+
+## 🏛️ Key Features & GIGW Compliance
+
+* **GIGW 3.0 Accessibility Toolbar**: Top government ribbon with dynamic font sizing (`A-`, `A`, `A+`), high-contrast black-and-yellow display mode, and a bilingual toggle (Hindi & English).
+* **Interactive GIS India Map**: Dynamic Survey of India vector map reflecting real-time state complaint counts directly from the database.
+* **Priority Action Hub**: Prominent dashboard callout highlighting urgent items requiring officer review today.
+* **Chronological Case Tracking**: Immutable vertical lifecycle timeline tracking every procedural step, officer note, bureau transfer, and final order.
+* **Quick-View Drawer**: Slide-over panel to inspect complaint dossiers without losing table filters or navigating away.
+* **Reports Suite**: Interactive analytical charts (Recharts) with one-click CSV export and printable audit reports.
+
+---
+
+## 🛠️ Architecture & Tech Stack
 aicte-nivaran/
 ├── frontend/               # React 18 SPA (Vite, Tailwind CSS, Recharts, Lucide)
 └── backend/                # Python FastAPI Gateway, SQLAlchemy & SQLite/PostgreSQL
+
 Frontend
 Core Framework: React 18+ with Vite
 Styling: Tailwind CSS (Navy #102A56 & Royal Blue #174EA6)
@@ -75,6 +108,7 @@ cd backend
 
 # Create and activate virtual environment
 python -m venv .venv
+
 # On Windows:
 .venv\Scripts\activate
 # On macOS/Linux:
@@ -88,8 +122,8 @@ python seed_data.py
 
 # Start the FastAPI server
 uvicorn app.main:app --reload --port 8000
-Backend API: http://127.0.0.1:8000
-Interactive API Docs (Swagger): http://127.0.0.1:8000/docs
+Backend API Base: http://127.0.0.1:8000
+Interactive Swagger UI: http://127.0.0.1:8000/docs
 3. Frontend Setup (In a New Terminal)
 code
 Bash
@@ -100,7 +134,7 @@ npm install
 
 # Start Vite development server
 npm run dev
-Frontend Web App: http://localhost:3000
+Frontend Web Application: http://localhost:3000
 🧪 Demonstration Test Scenario
 To test the platform's core innovation — Cross-Bureau Overlap Detection:
 Log in at http://localhost:3000 using officer.aicte@nic.in / Admin@123.
