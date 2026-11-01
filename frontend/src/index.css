@@ -1,0 +1,83 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-navy: #102A56;
+    --color-royal-blue: #174EA6;
+    --color-secondary-blue: #2563EB;
+    --color-light-blue: #EAF2FF;
+    --color-background: #F4F7FC;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #152238;
+    --color-text-secondary: #5C6D84;
+    --color-border: #D9E2EC;
+  }
+
+  body {
+    background-color: #F4F7FC;
+    font-family: 'Google Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: #152238;
+  }
+
+  h1, h2, h3, .font-biolinum {
+    font-family: 'Linux Biolinum', 'Cinzel', Georgia, serif;
+  }
+}
+
+/* Authentic Government Vignette Background */
+.gov-portal-bg {
+  position: relative;
+}
+
+.gov-portal-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Adjust image filename if yours is .png or named differently */
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(244, 247, 252, 0.88), rgba(244, 247, 252, 0.96)),
+    url('./assets/gov-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure Leaflet Container Stretches Properly */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 560px !important;
+  background: transparent !important;
+  z-index: 10 !important;
+}
+
+/* High Contrast Mode for GIGW Accessibility */
+body.high-contrast-mode {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.high-contrast-mode * {
+  border-color: #ffff00 !important;
+}
+
+body.high-contrast-mode .bg-white,
+body.high-contrast-mode .bg-slate-50 {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast-mode .text-aicte-navy,
+body.high-contrast-mode .text-aicte-royal {
+  color: #ffffff !important;
+}
