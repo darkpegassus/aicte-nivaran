@@ -1,233 +1,394 @@
 # AICTE NIVARAN
-> **National Integrated Voice for Action, Redress & Accountability**  
-> *An Integrated Institution Complaint Monitoring, 360° Audit & Cross-Bureau Overlap Coordination Platform*
+### National Integrated Voice for Action, Redress & Accountability
+
+**An Integrated Institution Complaint Monitoring, 360° Audit & Cross-Bureau Overlap Coordination Platform**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Smart%20India%20Hackathon-2026-102A56?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-F2B544?style=for-the-badge" />
+</p>
 
 ---
 
-[![Smart India Hackathon](https://img.shields.io/badge/Smart%20India%20Hackathon-2024%2F2026-102A56?style=for-the-badge)](https://sih.gov.in/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-F2B544.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+## 🌐 Live Demo
+
+| Resource | Link |
+|---|---|
+| **Public Web Application** | [AICTE NIVARAN](https://aicte-nivaran-phi.vercel.app) |
+| **Interactive API Documentation** | [FastAPI Swagger](https://aicte-nivaran-api.onrender.com/docs) |
+| **Demo Account** | `officer.aicte@nic.in` |
+| **Operational Role** | Super Admin |
+
+*Demo password is shared separately and is intentionally not published in this repository.*
 
 ---
 
-## 🌐 Live Deployments & Credentials
+## 📌 Problem Statement
 
-| Resource | URL |
-| :--- | :--- |
-| **Public Web Application** | [https://aicte-nivaran-phi.vercel.app](https://aicte-nivaran-phi.vercel.app) |
-| **Interactive API Documentation** | [https://aicte-nivaran-api.onrender.com/docs](https://aicte-nivaran-api.onrender.com/docs) |
-| **Evaluator Email** | `officer.aicte@nic.in` |
-| **Evaluator Password** | `Admin@123` |
-| **Operational Role** | `Super Admin (Member Secretary / Advisor)` |
+The **All India Council for Technical Education (AICTE)** receives complaints and grievances from students, faculty members, institutions and other stakeholders.
 
----
+These complaints are processed by multiple Bureaus and Cells, including:
 
-## 📌 Problem Statement & Context
+- **Regulation Bureau (RB):** Faculty service rules, pay scale violations and unapproved courses.
+- **Public Grievance Redressal Cell (PGRC):** Student grievances, certificate retention and curriculum disruptions.
+- **Approval Bureau (AB):** Infrastructure norms and Extension of Approval (EoA) compliance.
+- **Vigilance Cell (VIG):** Financial irregularities and administrative misconduct.
+- **Regional Offices:** Institutional verification and field-level monitoring.
 
-The **All India Council for Technical Education (AICTE)** processes complaints and regulatory matters across multiple statutory departments:
-* **Regulation Bureau (RB)**: Faculty service rules, pay scale violations, unapproved courses.
-* **Public Grievance Redressal Cell (PGRC)**: Student harassment, certificate retention, curriculum disruption.
-* **Approval Bureau (AB)**: Land/infrastructure norms, Extension of Approval (EoA) compliance.
-* **Vigilance Cell (VIG)**: Financial diversion, administrative misconduct.
-* **Regional Offices**: Field validations across 7 zones.
+### The problem: Departmental silos
 
-### The Silo Trap
-When an institutional crisis occurs, stakeholders file separate petitions with different bureaus at the same time:
-* *Faculty file salary non-payment petitions with the **Regulation Bureau**.*
-* *Students file class suspension grievances with the **Public Grievance Redressal Cell**.*
+A single institutional issue can generate multiple complaints across different Bureaus.
 
-Because departments traditionally operate without real-time cross-referencing, the result is:
-1. **Duplicated Administrative Effort**: Separate officers conduct parallel inquiries on the same college.
-2. **Conflicting Statutory Orders**: One bureau may issue a show-cause notice while another processes approval.
-3. **Regulatory Evasion**: Non-compliant administrations exploit departmental delays.
+For example:
+- Faculty members report salary non-payment to the Regulation Bureau.
+- Students report suspended classes to the Public Grievance Redressal Cell.
+
+Without centralized monitoring, this can result in:
+
+1. **Duplicated administrative effort:** Multiple officers investigate the same institution independently.
+2. **Conflicting actions:** Different Bureaus may initiate parallel proceedings.
+3. **Delayed disposal:** Lack of coordination increases resolution time.
+4. **Limited visibility:** Officials cannot easily identify all ongoing cases against an institution.
 
 ---
 
+## 💡 Our Solution: AICTE NIVARAN
 
-## 💡 The Solution: AICTE NIVARAN
-┌──────────────────────────────────────────────────────────────────────────┐
-│ AICTE NIVARAN │
-├─────────────────────┬────────────────────────────┬───────────────────────┤
-│ 1. INSTITUTION │ 2. INTELLIGENT OVERLAP │ 3. COORDINATED │
-│ 360° PROFILE │ DETECTION ENGINE │ DISPOSAL │
-├─────────────────────┼────────────────────────────┼───────────────────────┤
-│ Single master file │ Semantic NLP scans across │ One-click linking for │
-│ aggregating lifetime│ bureaus to flag duplicate │ joint Jan Sunwai │
-│ cases by AICTE ID. │ inquiries in real time. │ virtual hearings. │
-└─────────────────────┴────────────────────────────┴───────────────────────┘
-code
-Code
-1. **Centralized Institution 360° Profile**: Every accredited college has a single permanent ledger aggregating all lifetime complaints, approval histories, and show-cause notices by **Permanent AICTE ID**.
-2. **Intelligent Cross-Bureau Overlap Engine**: A semantic matching engine (RapidFuzz NLP) that scans complaints across bureaus in real time. When related root causes are detected, it alerts officers with a **`POTENTIAL OVERLAPPING CASES — COORDINATION REQUIRED`** banner and a similarity score.
-3. **Statutory 30-Day SLA Enforcement**: Tracks complaint ageing across brackets (`0-7`, `8-15`, `16-30`, and `>30 days Overdue`), escalating delayed cases to senior council management.
+AICTE NIVARAN establishes a centralized platform for monitoring institution-related complaints and coordinating actions across Bureaus.
+
+### Three core pillars
+
+| Pillar | Function |
+|---|---|
+| **Institution 360° Profile** | A consolidated institutional record containing complaints, regulatory actions and case history. |
+| **Intelligent Overlap Detection** | Identifies potentially related complaints across different Bureaus using text similarity and institutional mapping. |
+| **Coordinated Case Disposal** | Enables officers to review, link and coordinate related cases while maintaining an audit trail. |
+
+### Core innovation
+
+The system identifies potential overlaps even when complaints have different descriptions or originate from different departments.
+
+Example:
+
+**Institution A**
+- RB: Complaint regarding faculty termination.
+- PGRC: Complaint regarding disruption of classes due to faculty removal.
+
+NIVARAN identifies the common institution and flags:
+
+`POTENTIAL OVERLAPPING CASES — COORDINATION REQUIRED`
+
+The system provides similarity indicators and supporting information. Authorized officers review and decide whether the cases should be linked.
 
 ---
 
-## 🏛️ Key Capabilities & Features
+## 🏛️ Key Features
 
 ### 1. Centralized Institution Profile
-* **Permanent AICTE ID Mapping**: Aggregates institutional metadata (region, state, category, principal/director contacts) under an immutable master identifier.
-* **Consolidated Case Dossier**: Cross-departmental timeline tracking all active, under-process, and historic disposed matters.
 
-### 2. Cross-Bureau Overlap Detection *(Core Innovation)*
-* **Semantic Root-Cause Matching**: Evaluates token similarity across descriptions to identify correlated events even when phrasing differs (e.g., student strikes correlating with faculty non-payment).
-* **Automated Coordination Matrix**: Displays real-time similarity metrics, detection category, and procedural recommendations.
-* **Human-in-the-Loop Safeguard**: Generates non-binding recommendations; case linking requires explicit officer concurrence before joint hearings are scheduled.
+- Unique Permanent AICTE ID mapping.
+- Institution name, address, state and region.
+- Consolidated complaint history.
+- Active, pending and disposed case records.
+- Institution-wise regulatory activity overview.
 
-### 3. Chronological Case Lifecycle & Audit Trail
-* **Immutable Timeline Nodes**: Timestamped entries for intake, bureau allocation, officer assignment, show-cause dispatch, depositions, and final disposal orders.
-* **Inter-Bureau Transfer Workflow**: Re-assigns jurisdictional ownership with logged administrative justifications.
+### 2. Cross-Bureau Overlap Detection
 
-### 4. Real-Time Telemetry & GIS Integration
-* **Interactive Survey of India GIS Layer**: Dynamically synchronized state-by-state complaint density map.
-* **Executive Action Hub**: Surface-level alert board prioritizing imminent SLA breaches and unreviewed cross-bureau collisions.
-* **Multi-Dimensional Analytical Reports**: Workload distribution, disposal efficiency ratings, and case ageing analysis exportable to CSV.
+**The core innovation of NIVARAN.**
 
-### 5. GIGW 3.0 Compliance & Accessibility
-* **Bilingual Support**: Dynamic toggle between English and Hindi interfaces.
-* **Accessibility Controls**: Triple-scale font adjustment (`A-`, `A`, `A+`) and high-contrast display mode for visually impaired officers.
-* **Slide-Over Quick-View Drawers**: Inspect dossiers without losing navigational context or table filter parameters.
+- Detects multiple complaints concerning the same institution.
+- Uses RapidFuzz-based text similarity matching.
+- Identifies potentially related complaints despite differences in wording.
+- Displays similarity scores and detection categories.
+- Provides a coordination recommendation.
+- Supports officer-reviewed case linking.
+
+### 3. Complaint and Case Tracking
+
+- Unique complaint identification.
+- Complaint category and date of receipt.
+- Assigned Bureau and responsible officer.
+- Current case status and priority.
+- Expected disposal date and SLA monitoring.
+- Complete chronological action history.
+
+### 4. Dashboard and Analytics
+
+- Total complaints received.
+- Pending and under-process cases.
+- Disposed and overdue cases.
+- Bureau-wise workload.
+- Institution-wise complaint history.
+- Regional complaint distribution.
+- Complaint ageing and disposal analysis.
+
+### 5. Workflow and Audit Trail
+
+- Timestamped case history.
+- Officer-wise action records.
+- Bureau transfer and escalation tracking.
+- Supporting remarks and action documentation.
+- Related-case coordination history.
+
+### 6. Reports and Notifications
+
+- Pending case reminders.
+- Potential overlap notifications.
+- SLA and overdue alerts.
+- Bureau-wise and region-wise analytics.
+- CSV-compatible reporting.
+
+### 7. Accessibility and Usability
+
+- English and Hindi interface support.
+- Font scaling controls.
+- High-contrast display mode.
+- Slide-over case details.
+- Searchable and filterable complaint records.
 
 ---
 
-## 🛠️ Architecture & Technology Stack
-aicte-nivaran/
-├── frontend/ # React 18 SPA (Vite, Tailwind CSS, Recharts, Leaflet)
-└── backend/ # Python FastAPI Gateway, SQLAlchemy & SQLite/PostgreSQL
-code
-Code
-### Technology Breakdown
+## 🏗️ System Architecture
 
-| Layer | Technology | Function |
-| :--- | :--- | :--- |
-| **Frontend Framework** | React 18+ (Vite) | Single-page reactive application shell |
-| **Styling & Theme** | Tailwind CSS | Institutional design system (`#102A56` / `#174EA6`) |
-| **Typography** | Linux Biolinum & Google Sans | Sovereign governmental headings & legible data views |
-| **Data Visualization** | Leaflet & Recharts | Interactive GIS state mapping & administrative analytics |
-| **State & Navigation** | React Context & React Router v6 | Global state synchronization and protected role routing |
-| **API Backend** | Python FastAPI (0.115) | Asynchronous RESTful service layer (`/api/v1`) |
-| **Data Validation** | Pydantic v2 | Contract schemas for request/response serialization |
-| **ORM & Database** | SQLAlchemy 2.0 (SQLite / Postgres) | Relational store indexed on institution and bureau keys |
-| **Overlap Detection** | RapidFuzz (C++ engine) | In-memory token-set root-cause matching |
-| **Hosting & Cloud** | Vercel Edge & Render Containers | Distributed front-end CDN and containerized API engine |
+```text
+                 AUTHORIZED AICTE OFFICIALS
+                            |
+                            v
+                +-----------------------+
+                |   React Frontend      |
+                |   Tailwind CSS        |
+                |   Dashboard & Reports |
+                +-----------------------+
+                            |
+                            v
+                +-----------------------+
+                |     FastAPI Backend   |
+                |      REST API         |
+                +-----------------------+
+                            |
+             +--------------+--------------+
+             |              |              |
+             v              v              v
+       +-----------+  +------------+  +-------------+
+       | Institution|  | Complaint  |  | Overlap     |
+       | Management |  | Management |  | Detection   |
+       +-----------+  +------------+  +-------------+
+             |              |              |
+             +--------------+--------------+
+                            |
+                            v
+                +-----------------------+
+                |   SQLAlchemy ORM      |
+                +-----------------------+
+                            |
+                            v
+                +-----------------------+
+                | SQLite / PostgreSQL   |
+                +-----------------------+
+```
+
+### Technology Stack
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| Frontend | React 18, Vite | Interactive single-page application |
+| Styling | Tailwind CSS | Responsive interface and design system |
+| Charts | Recharts | Dashboard analytics |
+| Mapping | Leaflet | Interactive geographical visualization |
+| State Management | React Context | Shared application state |
+| Routing | React Router | Navigation and protected routes |
+| Backend | Python FastAPI | REST API services |
+| Validation | Pydantic v2 | Request and response validation |
+| ORM | SQLAlchemy 2.0 | Database operations |
+| Database | SQLite / PostgreSQL | Relational data storage |
+| Overlap Detection | RapidFuzz | Text similarity matching |
+| Deployment | Vercel / Render | Frontend and backend hosting |
 
 ---
 
-## 🔄 End-to-End Operational Workflow
-[ Citizen / Stakeholder Petition ]
-│
-▼
-┌────────────────────────────────────────────────────────┐
-│ 1. Central Digital Inward (Portal Intake) │
-│ • Assigned unique identifier (e.g., CMP-2025-XXXX) │
-│ • Mapped to Permanent AICTE Institution ID │
-│ • Routed to target bureau (RB, PGRC, AB, VIG, RO) │
-└───────────────────────┬────────────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────────────┐
-│ 2. Automated Overlap & Collision Scan │
-│ • Background task evaluates text semantics │
-│ • Cross-references active inquiries for same entity │
-│ • Flags similarity index (Threshold >= 75%) │
-└───────────────────────┬────────────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────────────┐
-│ 3. Officer Review & Coordination │
-│ • High-priority notification posted to Action Hub │
-│ • Side-by-side comparison of dual case files │
-│ • One-click action: "Link for Joint Bureau Hearing" │
-└───────────────────────┬────────────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────────────┐
-│ 4. Unified Disposal & Compliance (30-Day SLA) │
-│ • Joint virtual hearing scheduled via BharatVC │
-│ • Single enforceable directive issued to management │
-│ • Chronological audit trail permanently committed │
-└────────────────────────────────────────────────────────┘
-code
-Code
+## 🔄 End-to-End Workflow
+
+```mermaid
+flowchart TD
+    A["Citizen / Stakeholder Complaint"] --> B["Central Complaint Registration"]
+    B --> C["Assign Unique Complaint ID"]
+    C --> D["Map Permanent AICTE Institution ID"]
+    D --> E["Assign Concerned Bureau"]
+    E --> F["Cross-Bureau Overlap Detection"]
+    F --> G{"Potential Overlap Found?"}
+    G -->|Yes| H["Generate Coordination Alert"]
+    G -->|No| I["Continue Individual Processing"]
+    H --> J["Officer Reviews Related Cases"]
+    J --> K{"Officer Decision"}
+    K -->|Link Cases| L["Coordinated Case Monitoring"]
+    K -->|Keep Separate| I
+    L --> M["Action History and SLA Monitoring"]
+    I --> M
+    M --> N["Disposal / Escalation"]
+    N --> O["Management Dashboard and Reports"]
+```
+
 ---
 
-## 🚀 Local Installation & Execution
+## 🚀 Installation and Local Setup
 
 ### Prerequisites
-* **Node.js** (v18 or higher)
-* **Python** (v3.11 or v3.12)
-* **Git**
 
-### 1. Clone Repository
+- Node.js 18 or higher
+- Python 3.11 or higher
+- Git
 
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/darkpegassus/aicte-nivaran.git
+
 cd aicte-nivaran
-2. Backend Initialization
-code
-Bash
+```
+
+### 2. Backend Setup
+
+```bash
 cd backend
 
 # Create virtual environment
-python -m venv .venv
+python -m venv venv
 
-# Activate virtual environment
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
+# Activate virtual environment (Windows)
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Populate synthetic database (50 colleges, 125 complaints, baseline overlaps)
+# Populate synthetic demonstration data
 python seed_data.py
 
-# Launch FastAPI development server
+# Start FastAPI server
 uvicorn app.main:app --reload --port 8000
-API Root: http://127.0.0.1:8000
-Interactive OpenAPI Specs: http://127.0.0.1:8000/docs
-3. Frontend Initialization (In a Separate Terminal)
-code
-Bash
-cd frontend
+```
 
+Backend API:
+
+- API Root: http://127.0.0.1:8000
+- Interactive API Documentation: http://127.0.0.1:8000/docs
+
+### 3. Frontend Setup
+
+Open a separate terminal at the project root (the directory containing `package.json`).
+
+```bash
 # Install dependencies
 npm install
 
-# Start Vite local server
+# Start Vite development server
 npm run dev
-Application Shell: http://localhost:3000
-🧪 Demonstration Test Scenario (Evaluator Walkthrough)
-To verify the core Cross-Bureau Overlap Detection mechanism:
-Access Portal: Navigate to http://localhost:3000 and sign in with officer.aicte@nic.in / Admin@123.
-Review Baseline State: Note that Apex Institute of Technology (AICTE-1-4328911) has an active case under the Regulation Bureau (RB) for mass faculty dismissals (CMP-2025-0101).
-Register Correlated Matter:
-Navigate to Grievance Central (/complaints) 
-→
-→
- Click + Register New Complaint.
-Select Apex Institute of Technology.
-Bureau: Public Grievance Redressal Cell (PGRC).
-Category: Student Grievance & Harassment.
-Subject: Final-year class disruption due to faculty removal.
-Description: CSE students report complete stoppage of classes following abrupt dismissal of core department professors.
+```
+
+Open the local URL printed by Vite in your terminal.
+
+---
+
+## 🧪 Demonstration Scenario: Cross-Bureau Overlap Detection
+
+The following scenario demonstrates NIVARAN's core functionality.
+
+### Step 1: Access the Dashboard
+
+Sign in using the authorized demonstration account.
+
+### Step 2: Review Existing Complaint
+
+Navigate to the institution:
+
+**Apex Institute of Technology & Management**
+
+Permanent AICTE ID: `AICTE-1-4328911`
+
+An existing Regulation Bureau complaint is available:
+
+- Case ID: `CMP-2025-0101`
+- Bureau: Regulation Bureau (RB)
+- Issue: Illegal termination of faculty members.
+
+### Step 3: Register a Related Complaint
+
+Navigate to **Complaints → Register New Complaint**.
+
+Enter the following demonstration details:
+
+| Field | Value |
+|---|---|
+| Institution | Apex Institute of Technology & Management |
+| Bureau | Public Grievance Redressal Cell |
+| Category | Student Grievance & Harassment |
+| Subject | Final-year class disruption due to faculty removal |
+| Description | CSE students report complete stoppage of classes following abrupt dismissal of core department professors. |
+
 Submit the complaint.
-Inspect Overlap Engine:
-Open Overlap Detection Engine (/overlaps).
-The system immediately displays an 85%+ Similarity Collision Alert.
-Click Compare & Coordinate to inspect the side-by-side evidence matrix.
-Click Link Cases for Joint Bureau Hearing to synchronize procedural oversight.
-Inspect Dynamic Sync:
-Return to the Dashboard; Maharashtra's tally on the interactive India GIS Map increments in real time.
-🔒 Security, Compliance & Data Disclaimer
-Synthetic Data Usage: All institutional titles, names, registration codes, and case texts contained in this repository are synthetically generated demonstration data.
-Zero Production Access: The software is not connected to live government networks or confidential AICTE production databases.
-Advisory Operations: The algorithmic engine only produces advisory flags and never autonomously determines, dismisses, or merges statutory legal disputes.
-👥 Hackathon Context & Acknowledgments
-Initiative: Smart India Hackathon (SIH) 2024 / 2026
-Nodal Organization: All India Council for Technical Education (AICTE), Ministry of Education, Government of India
-Design Standards: Guidelines for Indian Government Websites (GIGW 3.0) & Department of Consumer Affairs e-Jagriti Framework
-📄 License
-This project is open-source and licensed under the MIT License.
+
+### Step 4: Inspect Overlap Detection
+
+Navigate to the **Overlap Detection Engine**.
+
+The system identifies the common institution and evaluates the similarity between the two complaints.
+
+Review:
+- Similarity score.
+- Detection category.
+- Bureau assignments.
+- Case descriptions.
+- Coordination recommendation.
+
+### Step 5: Coordinate Cases
+
+Use the case comparison interface to inspect both complaints.
+
+An authorized officer can choose to link the cases for coordinated monitoring.
+
+### Step 6: Verify Dashboard Updates
+
+Return to the dashboard to inspect updated complaint statistics and overlap information.
+
+---
+
+## 🔐 Security, Compliance and Data Disclaimer
+
+- **Synthetic Data:** All institution names, identification records, officer details and complaint descriptions included in the demonstration dataset are synthetic.
+- **No Production Access:** This application is not connected to live AICTE networks or confidential government databases.
+- **Advisory Decision Support:** Overlap detection generates potential matches, not legal conclusions.
+- **Human-in-the-Loop:** Authorized officers must review and approve case-linking decisions.
+- **Authentication:** Demonstration authentication must not be treated as production-grade government identity verification.
+- **Data Protection:** Real institutional, personal or confidential complaint records should not be uploaded to this demonstration deployment.
+
+---
+
+## 👥 Hackathon Context and Acknowledgements
+
+| Detail | Information |
+|---|---|
+| Initiative | Smart India Hackathon 2026 |
+| Nodal Organization | All India Council for Technical Education (AICTE) |
+| Ministry | Ministry of Education, Government of India |
+| Project | AICTE NIVARAN |
+| Domain | Institutional Complaint Monitoring and Regulatory Coordination |
+
+---
+
+## 📄 License
+
+This project is intended to be open-source under the **MIT License**.
+
+See the `LICENSE` file for details.
+
+---
+
+<p align="center">
+  <b>AICTE NIVARAN</b><br/>
+  One Institution. One Consolidated View. Better Coordination.
+</p>
